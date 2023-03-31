@@ -14,8 +14,12 @@ console.log(result);
 
 // ***********************************
 
-const employee = { name: "Martin", age: "32" };
-const newEmployee = Object.assign({}, employee, {name: "Bob"});
+const employee = { name: "Martin", age: "32", company: {country: "Canada", city: "Toronto"} };
+const newEmployee = {
+    ... employee,
+    name: "Jimmy",
+    company: {...employee.company, city: "Calgary"}
+}
 
 console.log(employee);
 console.log(newEmployee);
